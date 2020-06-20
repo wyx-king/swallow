@@ -1,0 +1,395 @@
+@basecolor: #e92322;
+.wjs_header {
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 1px solid #8C8C8C;
+    .row {
+        height: 100%;
+        text-align: center;
+        >div:nth-of-type(-n+3) {
+            border-right: 1px solid #ccc;
+            >.wjs_code {
+                position: relative;
+                display: block;
+                color: #000000;
+                &:hover {
+                    text-decoration: none;
+                }
+                >img {
+                    position: absolute;
+                    display: none;
+                    top: 49px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    border: 1px solid #CCCCCC;
+                    border-top: none;
+                    z-index: 999;
+                }
+                &:hover {
+                    >img {
+                        display: block;
+                    }
+                }
+            }
+        }
+        >div:nth-of-type(3) {
+            >a {
+                color: #000000;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+        >div:nth-last-of-type(1) {
+            >.btn-link {
+                color: #000000;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            >.btn-danger {
+                border-color: @basecolor;
+                background-color: @basecolor;
+            }
+            >.btn {
+                padding: 4px 6px;
+            }
+        }
+    }
+}
+
+
+/*头部导航栏*/
+
+.wjs_nav {
+    margin-bottom: 0;
+    .navbar-brand {
+        height: 80px;
+        line-height: 80px;
+        >.glyphicon {
+            font-size: 40px;
+        }
+        >span:first-of-type {
+            color: @basecolor;
+        }
+        >span:last-of-type {
+            color: #333;
+        }
+    }
+    .navbar-nav {
+        >li {
+            >a {
+                line-height: 50px;
+                font-size: 16px;
+            }
+            >a:hover,
+            a:focus {
+                color: #777;
+                border-bottom: 3px solid @basecolor;
+            }
+        }
+        >.active {
+            >a,
+            a:hover,
+            a:focus {
+                border-bottom: 3px solid @basecolor;
+                background: transparent;
+            }
+        }
+    }
+    .navbar-toggle {
+        margin-top: 23px;
+    }
+}
+
+
+/*轮播图*/
+
+.wjs_banner {
+    .mobileimg {
+        width: 100%;
+        display: block;
+        >img {
+            width: 100%;
+            display: block;
+        }
+    }
+    .pcImg {
+        width: 100%;
+        height: 410px;
+        display: block;
+    }
+}
+
+//信息块
+.wjs_info {
+    padding: 30px;
+    .glyphicon-xbt {
+        font-size: 30px;
+    }
+    .row {
+        >div {
+            margin-top: 20px;
+            >a {
+                color: #000000;
+                text-decoration: none;
+                &:hover {
+                    color: @basecolor;
+                }
+            }
+        }
+    }
+}
+
+//预约块
+.wjs_reverse {
+    height: 80px;
+    line-height: 80px;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    .glyphicon {
+        font-size: 16px;
+    }
+    a {
+        text-decoration: none;
+    }
+    .frist {
+        color: #000000;
+        &:hover {
+            color: @basecolor;
+        }
+    }
+    .second {
+        color: @basecolor;
+        border-bottom: 1px dashed @basecolor;
+    }
+}
+
+//产品块
+.wjs_product {
+    padding: 10px;
+    background-color: #eee;
+    .nav-parent {
+        width: 100%;
+        overflow: hidden;
+    }
+    .nav-tabs {
+        >li {
+            padding: 0px 5px;
+            >a {
+                line-height: 30px;
+                border: none;
+                border-radius: 0;
+                background-color: transparent;
+                &:hover {
+                    border-bottom: 2px solid @basecolor;
+                }
+            }
+            &.active {
+                >a,
+                a:hover,
+                a:focus {
+                    border: none;
+                    border-radius: 0;
+                    background-color: transparent;
+                    border-bottom: 2px solid @basecolor;
+                }
+            }
+        }
+    }
+    .pbox {
+        height: 150px;
+        margin-top: 20px;
+        background-color: #ffffff;
+        &.active {
+            background-color: @basecolor;
+            >div p,
+            >div b,
+            >div sub,
+            {
+                color: #FFFFFF;
+            }
+            >.pleft {
+                &::before {
+                    content: "glyphicon glyphicon-pencil";
+                    font-family: "glyphicon-pencil";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #FFFFFF;
+                }
+            }
+        }
+        .pleft {
+            height: 150px;
+            margin-right: 100px;
+            padding-top: 10px;
+            >p {
+                text-align: center;
+            }
+            .row {
+                margin-left: -8px;
+                margin-right: -8px;
+                >div:nth-of-type(even) {
+                    text-align: right;
+                }
+            }
+        }
+        .pright {
+            height: 150px;
+            width: 100px;
+            position: absolute;
+            right: 15px;
+            top: 20px;
+            text-align: center;
+            padding-top: 40px;
+            border-left: 1px dashed #EEEEEE;
+            .wjs_tip {
+                width: 100%;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: 25px;
+                cursor: pointer;
+                >span:first-of-type {
+                    border: 1px solid @basecolor;
+                    color: @basecolor;
+                }
+                span:last-of-type {
+                    border: 1px solid blue;
+                    color: blue;
+                }
+            }
+            >b {
+                font-size: 30px;
+                color: @basecolor;
+            }
+            >sub {
+                bottom: 0;
+                color: @basecolor;
+            }
+            &::before,
+            &::after {
+                content: "";
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: #EEEEEE;
+                position: absolute;
+                left: -5px;
+            }
+            &::before {
+                top: -5px;
+            }
+            &::after {
+                bottom: -5px;
+            }
+        }
+    }
+}
+
+//新闻块
+.wjs_news{
+	margin: 20px;
+	
+	.new-title{
+		padding: 10px;
+		font-size: 20px;
+		border-bottom: 1px solid #EEEEEE;
+		text-align: center;
+		position: relative;
+		&::after{
+			content: "";
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			border: 1px solid #CCCCCC;
+			position: absolute; 
+			right: -8px;
+			bottom: -4px;
+		}
+	}
+	.new-line{
+		width: 1px;
+		height:100%;
+		border: 1px dashed #CCCCCC;
+		position: absolute;
+		top: 0;
+		left: 40px;
+	}
+	.nav-tabs{
+		    border: none;
+            //margin: 20px;
+            >li{
+            	margin-bottom: 60px;
+//          	&li:last-of-type{
+//                  margin-bottom: 0;
+//              }
+            	a{
+            		width: 50px;
+            		height: 50px;
+            		border-radius: 50%;
+            		background-color: #EEEEEE;
+            		&:hover{
+            			border: none;
+            			background-color: @basecolor;
+            		}
+            		>.glyphicon {
+                        font-size: 30px;
+                        top:0;
+                        left: -5px;
+                        
+                    }
+            			
+            	}
+            		
+        		&.active{
+                    >a,a:hover,a:focus{
+                        border: none;
+                        background-color: @basecolor;
+                    }
+            	}
+            }
+            >li:last-of-type{
+                    margin-bottom: 0;
+            }
+            @media screen and (min-width: 768px) and (max-width: 992px){
+            	>li{
+            		margin: 20px 30px;
+            	}
+            }
+            @media screen and (max-width: 768px){
+            	>li{
+            		margin: 20px 0;
+                    width: 25%;
+            	}
+            	
+            }
+        }
+       .new-list{
+       	list-style: none;
+       	>li{
+       		line-height: 50px;
+       	}
+       }
+}
+//合作伙伴
+.wjs_partner{
+	background-color: #EEEEEE;
+	padding: 20px;
+	text-align: center;
+	h3{
+		width: 100%;
+		text-align: center;
+		padding-bottom: 20px;
+	}
+	ul{
+		list-style: none;
+		display: inline-block;
+		>li{
+			float: left;
+			margin-left: 20px;
+			font-size: 40px;
+		}
+	}
+}
